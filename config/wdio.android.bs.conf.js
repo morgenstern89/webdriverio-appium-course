@@ -4,6 +4,8 @@ const {config} = require('./wdio.shared.conf');
 
 
 // config.port = 4723;
+config.user= process.env.BROWSERSTACK_USER;
+config.key= process.env.BROWSERSTACK_KEY;
 
 config.specs = [
     './test/specs/android/add-note-screen*.js'
